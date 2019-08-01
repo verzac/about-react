@@ -14,13 +14,20 @@ interface ImageContainerState {
 }
 
 const styles = createStyles({
+  container: {
+    margin: '11px',
+    // display: 'block',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
   hidden: {
     display: 'none',
   },
   icons: {
     height: '64px',
     width: '64px',
-    margin: '11px',
+    margin: 'auto',
   },
 });
 
@@ -36,25 +43,25 @@ class ImageContainer extends React.Component<ImageContainerProps & WithStyles<ty
   render() {
     const { className, classes, imgSrc, imgAlt, imgCaption, imgType } = this.props;
     const { isLoading } = this.state;
-    let containerClass = undefined;
+    let imgClass = '';
     switch (imgType) {
       case 'icon':
-        containerClass = classes.icons;
+        imgClass = classes.icons;
         break;
       default:
         break; // default to using className
     }
     return (
-      <Box display="block" className={containerClass}>
+      <div className={classes.container}>
         {isLoading && <CircularProgress />}
         <img
           src={imgSrc}
           alt={imgAlt}
-          className={`${className} ${isLoading ? classes.hidden : undefined}`}
+          className={`${className ? className : ''} ${imgClass} ${isLoading ? classes.hidden : ''}`}
           onLoad={this.onImgLoad.bind(this)}
         />
-        {imgCaption && (<Typography variant="caption">{imgCaption}</Typography>)}
-      </Box>
+        {imgCaption && (<Typography variant="caption" style={{wordWrap: 'break-word'}}>{imgCaption}</Typography>)}
+      </div>
     );
   }
 }

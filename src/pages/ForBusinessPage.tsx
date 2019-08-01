@@ -1,10 +1,12 @@
 import React from 'react';
-import SkillsPage from './SkillsPage';
+import TechnologiesPage from './micro-pages/TechnologiesPage';
+import LanguagePage from './micro-pages/LanguagePage';
 
 const ForBusinessPage: React.FC = () => {
   return (
     <>
-      <SkillsPage/>
+      <TechnologiesPage/>
+      <LanguagePage/>
     </>
   );
 }
