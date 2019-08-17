@@ -12,10 +12,12 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 const styles = (theme: Theme) => createStyles({
   root: {
     textAlign: 'center',
-    flexGrow: 1
   },
   content: {
     marginTop: theme.spacing(3),
+    maxWidth: '90%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -36,11 +38,19 @@ const theme = createMuiTheme({
     },
     h3: {
       fontSize: '2rem',
+      fontWeight: 300,
     },
     h4: {
       fontSize: '1.5rem',
     },
   },
+  // overrides: {
+  //   MuiTypography: {
+  //     root: {
+  //       fontFamily: '"Montserrat", "Roboto", "Helvetica", "Arial", sans-serif',
+  //     },
+  //   }
+  // }
 });
 
 const App: React.FC<WithStyles<typeof styles>> = (props) => {
@@ -51,9 +61,9 @@ const App: React.FC<WithStyles<typeof styles>> = (props) => {
         <div className={classes.root}>
           <AppBar position="sticky">
             <Toolbar>
-              <IconButton edge="start" color="inherit">
+              {/* <IconButton edge="start" color="inherit">
                 <MenuIcon />
-              </IconButton>
+              </IconButton> */}
               <Typography className={classes.title}>
                 Benjamin Tanone
           </Typography>

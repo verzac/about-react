@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircularProgress, createStyles, withStyles, WithStyles, Typography, Box } from '@material-ui/core';
+import { CircularProgress, createStyles, withStyles, WithStyles, Typography, Box, Theme } from '@material-ui/core';
 
 interface ImageContainerProps {
   imgSrc: string;
@@ -13,9 +13,9 @@ interface ImageContainerState {
   isLoading: boolean;
 }
 
-const styles = createStyles({
+const styles = (theme: Theme) => createStyles({
   container: {
-    margin: '11px',
+    margin: theme.spacing(1),
     // display: 'block',
     display: 'flex',
     flexDirection: 'column',
@@ -25,8 +25,10 @@ const styles = createStyles({
     display: 'none',
   },
   icons: {
-    height: '64px',
-    width: '64px',
+    maxHeight: '64px',
+    maxWidth: '64px',
+    height: 'auto',
+    width: '100%',
     margin: 'auto',
   },
 });

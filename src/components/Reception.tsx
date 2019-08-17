@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box, Button } from "@material-ui/core";
-import ForBusinessPage from "../pages/ForBusinessPage";
+import ForRecruiterPage from "../pages/ForRecruiterPage";
 import { Profile, ProfileService } from "../services/ProfileService";
 
 interface ReceptionState {
@@ -56,7 +56,7 @@ class Reception extends React.Component<any, ReceptionState> {
           ) : (
               <Button onClick={this.onClearProfile}>Not a {profile}? Click here to change who you are.</Button>
             )}
-        {profile === 'business' && <ForBusinessPage />}
+        {profile === 'recruiter' && <ForRecruiterPage />}
       </>
     );
   }

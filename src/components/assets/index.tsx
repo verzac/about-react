@@ -1,0 +1,23 @@
+import React from 'react';
+import AwsLogo from '../../assets/logo-aws.png';
+import ImageContainer from '../../components/ImageContainer';
+import SpringBootLogo from '../../assets/icon-spring-boot.svg';
+import ReactLogo from '../../assets/logo-react.svg';
+import AngularLogo from '../../assets/angular.png';
+import NodeLogo from '../../assets/node.png';
+import AwsSamLogo from '../../assets/logo-sam.png';
+import AnsibleLogo from '../../assets/ansible-logo.svg';
+import WordpressLogo from '../../assets/wordpress-logo.svg';
+import DockerLogo from '../../assets/logo-docker.png';
+import KongLogo from '../../assets/logo-kong.png';
+
+export const AwsIcon: React.FC = () => (<ImageContainer imgSrc={AwsLogo} imgCaption="AWS" imgType="icon" imgAlt="AWS Logo"/>);
+export const SpringBootIcon: React.FC = () => (<ImageContainer imgSrc={SpringBootLogo} imgAlt="Spring Boot" imgCaption="Java/Spring Boot" imgType="icon"/>);
+export const ReactIcon: React.FC = () => (<ImageContainer imgSrc={ReactLogo} imgAlt="React" imgCaption="React.js" imgType="icon"/>);
+export const AngularIcon: React.FC = () => (<ImageContainer imgSrc={AngularLogo} imgAlt="Angular" imgCaption="Angular 6+" imgType="icon"/>);
+export const NodeIcon: React.FC = () => (<ImageContainer imgSrc={NodeLogo} imgAlt="Node.js" imgCaption="Node.js" imgType="icon"/>);
+export const AwsSamIcon: React.FC = () => (<ImageContainer imgSrc={AwsSamLogo} imgAlt="AWS SAM/Serverless" imgCaption="AWS SAM/Serverless" imgType="icon"/>);
+export const AnsibleIcon: React.FC = () => (<ImageContainer imgSrc={AnsibleLogo} imgAlt="Ansible" imgCaption="Ansible" imgType="icon"/>);
+export const WordpressIcon: React.FC = () => (<ImageContainer imgSrc={WordpressLogo} imgAlt="WordPress" imgCaption="WordPress" imgType="icon"/>);
+export const DockerIcon: React.FC = () => (<ImageContainer imgSrc={DockerLogo} imgAlt="Docker" imgCaption="Docker" imgType="icon"/>);
+export const KongIcon = () => (<ImageContainer imgSrc={KongLogo} imgAlt="Kong" imgCaption="Kong" imgType="icon"/>);

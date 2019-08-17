@@ -5,6 +5,7 @@ import ImageContainer from '../components/ImageContainer';
 import LinkedInIcon from '../assets/linkedin-brands.svg';
 import GitHubIcon from '../assets/github-brands.svg';
 import Reception from '../components/Reception';
+import MediumIcon from '../assets/medium-brands.svg';
 
 const styles = (theme: Theme) => ({
   name: {
@@ -40,6 +41,9 @@ const Home: React.FC<WithStyles<typeof styles>> = (props) => {
           </a>
           <a href="https://github.com/verzac" target="_blank" rel="noopener noreferrer">
             <ImageContainer imgAlt="GitHub Link" imgSrc={GitHubIcon} imgType="icon" />
+          </a>
+          <a href="https://medium.com/@benjamin.tanone" target="_blank" rel="noopener noreferrer">
+            <ImageContainer imgAlt="Medium Link" imgSrc={MediumIcon} imgType="icon" />
           </a>
         </Box>
       </section>
