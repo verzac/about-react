@@ -1,0 +1,26 @@
+sudo: required
+addons:
+  chrome: stable
+language: node_js
+node_js:
+  - '10'
+branches:
+  only:
+    - master
+script:
+  - npm install
+  - npm run build
+deploy:
+  - provider: s3
+    access_key_id:
+      secure: 
+        kWcVaVJoLwlPwizeQ059OpYd8Czet4mOX6PH9muRAbMqx8ZrB3br6J2RrZifit53D05E5enhRE3HtBSnVzM12TsTP8buJiTWl0nmWBJqLUYbHBCTLuE9XNTg9lVmoNo5hKZ8wM5I5o+JNapfa9lTYEs9HgH7MceWKobEvlyOGAKHoAJ/DGtFI24OIb6TvId17h5k4Oxy9udDujVSZEY11jBlFOBl5gCX3KtdkKWsdUERgbq9Wy7QHt4RuoF15NrRlUeiZTFbFdGU3CFgAwnhbNJxHRGlklM7ygpNl2TSkYHTszb7X+/nVU+tYIHHD71bVjlOcyAbAostvcTqqbrnQnBAQogzBeCmgzL42Ov2gF7fgyEYaSlJGGXDG/gyL9ZSg6K9FhtlG0qUPTBshkgFo83w983Bhx6dGhcR4tgTib/305Fvb1lV43ZBzSqndE0eBseIbS6TEjdynEPPVBY5Df0D00COJvdARHrSfA7xcEMoJXVKS4jYNSkyKD3EssQO9YYU3RGd5R3/ohPuO8JyIV8OPXWcztKyDPKxvkrN09ZCBwwTRtDrob9v6ydN/ZF6LV+Zxhut2csAe7MEDgtGtwqyJ+4LaGMtHK+jgEAbSt2aMzAFK8ujPV7KE9mZrw82ieIb8W+2T9JG71h+0r/nvHDGgrbUhv+rsumo5UfdwBk=
+    secret_access_key:
+      secure: 
+        ju0wRsXPSpa0nQ/SwVjGf38EZ6jPVD+i8KiyBTPPFBEaYw2VbFIfYmPBayaBHiD2sDwJte2V2+e9Ga/OCVK0kNFgLHkuwFmyUbfh9cGZwiG9IavQbEY3RtbukNA6uIMupR2S02x5gtuFUVXgXTbJ/mJxSJu+S0aprDjW9GuvnQDsoxWWgs8wRXMIjynbvJle04Op67OOisZ8SxM5Rv0uJf71wElQWVRoq7L3e8QmZ7AIyL7sd7l5cdOg7vq9N9ELFKrhZEvqrr7KO8Zyk0GXcslnx+sWqZHMK7Pj6CfSMiwWcdpFLH5RZM53NE3ayxPWTMPkWsKfI94mqsonUmPKQEOtdci3oPiVJICM6lyaLFNqfbwPpLPU4QMKcxOC4SRBEhY7Meqj1KtA+tvEUg7UbXWaH8eBPPPdv9+TCmxrRg7ZleV2nDW8xRXYl14YO6lfhqccMEjmsf6pFKwT//OKjv6pu35vDrFcrtNpgKnKz+x7Sb2QGTxkFIS7aaMjyk5Cwv4fzR+irFsdoQPEdReSm41HLe0yo2k9hVKGIOW7my4sXiP+mkpuqsSzHd5LpjjfvDO8jUSIi4iGsODwYQp7n9GltfNVgdPE4UzGYthi8RHs/mXA2ac5yRymqNVYdl1M88tWXI+VOPsSC4UwrmnXhK+AVMyrsrIIDbxlpbpWHWs=
+    bucket: about-react
+    skip_cleanup: true
+    local_dir: build
+    region: ap-southeast-2
+    on:
+      branch: master
