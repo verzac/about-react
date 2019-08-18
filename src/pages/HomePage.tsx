@@ -4,7 +4,6 @@ import profilePicture from '../assets/profile-picture.jpg';
 import ImageContainer from '../components/ImageContainer';
 import LinkedInIcon from '../assets/linkedin-brands.svg';
 import GitHubIcon from '../assets/github-brands.svg';
-import Reception from '../components/Reception';
 import MediumIcon from '../assets/medium-brands.svg';
 import ForRecruiterPage from './ForRecruiterPage';
 
