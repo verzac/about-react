@@ -1,9 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
-import MenuIcon from '@material-ui/icons/Menu';
-import { Typography, withStyles, WithStyles, createStyles, AppBar, Toolbar, IconButton, Button, makeStyles, Theme, createMuiTheme } from '@material-ui/core';
+import { Typography, withStyles, WithStyles, createStyles, AppBar, Toolbar, Button, Theme, createMuiTheme } from '@material-ui/core';
 import HomePage from './pages/HomePage';
-import { Router, Route, Switch, withRouter } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import NotFoundPage from './pages/NotFoundPage';
 import Routing from './utils/Routing';

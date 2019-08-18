@@ -32,7 +32,4 @@ async function setProfile(profile?: Profile): Promise<void> {
   localStorage.setItem(PROFILE_LOCAL_STORAGE_KEY, profile);
 }
 
-async function clearProfile(): Promise<void> {
-}
-
 export const ProfileService = { getCurrentProfile, setProfile };

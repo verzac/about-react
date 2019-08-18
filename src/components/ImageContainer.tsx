@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircularProgress, createStyles, withStyles, WithStyles, Typography, Box, Theme } from '@material-ui/core';
+import { CircularProgress, createStyles, withStyles, WithStyles, Typography, Theme } from '@material-ui/core';
 
 interface ImageContainerProps {
   imgSrc: string;

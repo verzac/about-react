@@ -1,6 +1,5 @@
 import React from 'react';
 import { Typography, Box } from '@material-ui/core';
-import ImageContainer from '../../components/ImageContainer';
 import { AwsIcon, SpringBootIcon, ReactIcon, AngularIcon, NodeIcon, AwsSamIcon, DockerIcon, KongIcon } from '../../components/assets';
 
 const TechnologiesPage: React.FC = () => {

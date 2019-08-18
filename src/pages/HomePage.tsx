@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, WithStyles, withStyles, Box, Theme, Button } from '@material-ui/core';
+import { Typography, WithStyles, withStyles, Box, Theme } from '@material-ui/core';
 import profilePicture from '../assets/profile-picture.jpg';
 import ImageContainer from '../components/ImageContainer';
 import LinkedInIcon from '../assets/linkedin-brands.svg';
