@@ -3,7 +3,7 @@ import TechnologiesPage from './micro-pages/TechnologiesPage';
 import LanguagePage from './micro-pages/LanguagePage';
 import ExperiencePage from './micro-pages/ExperiencePage';
 
-const ForBusinessPage: React.FC = () => {
+const ForRecruiterPage: React.FC = () => {
   return (
     <>
       <TechnologiesPage/>
@@ -13,4 +13,4 @@ const ForBusinessPage: React.FC = () => {
   );
 }
 
-export default ForBusinessPage;
+export default ForRecruiterPage;

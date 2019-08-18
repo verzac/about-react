@@ -39,31 +39,6 @@ const ExperiencePage: React.FC = () => {
           </Typography>
         </Experience>
         <Experience
-          projectTitle="IT Contractor/Consultant @ ZENA Indonesia"
-          projectDuration="Jan 2018 - Jun 2018"
-          shortDescription="ZENA was a newly-formed fashion brand and boutique which needed IT expertise in order to develop their online presence."
-          bannerProps={{
-            imgSrc: 'https://www.zena.id/wp-content/uploads/2018/02/LogoZena-01.png',
-            title: 'ZENA Indonesia',
-          }}
-        >
-          <Typography variant="h6">Technologies</Typography>
-          <Box display="flex" flexDirection="row" justifyContent="center" flexWrap="wrap" textAlign="center">
-            <AwsIcon />
-            <AnsibleIcon />
-            <WordpressIcon />
-            <DockerIcon />
-          </Box>
-          <Typography variant="h6">Responsibilities</Typography>
-          <Typography>
-            <li>Setting up a LEMP-WordPress stack on AWS Lightsail.</li>
-            <li>Frontend development using React.js and Material UI.</li>
-            <li>Architecting the system in a way that conforms to best practices and Monash University's cloud governance sturcture.</li>
-            <li>Guided the implementation of the Open ID Connect protocol within the system for authentication and authorisation.</li>
-            <li>Mentoring other developers, including assigning them suitable pieces of work and helping them where necessary.</li>
-          </Typography>
-        </Experience>
-        <Experience
           projectTitle="Project Lead/Backend Developer @ Final Year Project for SAP"
           projectDuration="Feb 2018 - Dec 2018"
           shortDescription="SAP wanted a proof of concept iOS app + IoT system to demonstrate the IoT capability of their cloud offering: SAP Cloud Platform."
@@ -85,6 +60,28 @@ const ExperiencePage: React.FC = () => {
           </Typography>
         </Experience>
         <Experience
+          projectTitle="IT Contractor/Consultant @ ZENA Indonesia"
+          projectDuration="Jan 2018 - Jun 2018"
+          shortDescription="ZENA is a newly-formed fashion brand and boutique which needed IT expertise in order to develop their online presence."
+          bannerProps={{
+            imgSrc: 'https://www.zena.id/wp-content/uploads/2018/02/LogoZena-01.png',
+            title: 'ZENA Indonesia',
+          }}
+        >
+          <Typography variant="h6">Technologies</Typography>
+          <Box display="flex" flexDirection="row" justifyContent="center" flexWrap="wrap" textAlign="center">
+            <AwsIcon />
+            <AnsibleIcon />
+            <WordpressIcon />
+            <DockerIcon />
+          </Box>
+          <Typography variant="h6">Responsibilities</Typography>
+          <Typography>
+            <li>Setting up a LEMP-WordPress + MySQL using Docker Compose stack on a VPS instance, including administrating the server and ensuring appropriate security measures are in place.</li>
+            <li>Setting up an Ansible deployment playbook in order to facilitate faster prototyping.</li>
+          </Typography>
+        </Experience>
+        <Experience
           projectTitle="Industry Based Learning Web Developer @ Australia Post's Developer Portal"
           projectDuration="Jun 2017 - Dec 2017"
           shortDescription="AusPost's Developer Portal is a one-stop shop where developers can consume APIs and API publishers can publish and control their APIs."
@@ -102,9 +99,11 @@ const ExperiencePage: React.FC = () => {
           </Box>
           <Typography variant="h6">Responsibilities</Typography>
           <Typography>
-            <li>Provided technical direction for the team.</li>
-            <li>Developed an IoT gateway on a Raspberry Pi using Node.js which connects our IoT devices with SAP Cloud Platform.</li>
-            <li>Acting as a scrum master/product owner for the team.</li>
+            <li>Developed and enhanced both new and existing functionalities within the team’s RESTful micro-services on Spring Boot 1 (Java).</li>
+            <li>Secured a newly built micro-service by implementing OpenID Connect using Spring Security.</li>
+            <li>Developed and enhanced existing user interfaces running on top of AngularJS and Angular 4.</li>
+            <li>Working with Kong (as our API gateway solution) in order to debug our micro-services.</li>
+            <li>Working in an agile team utilising SAFe (Scaled Agile Framework for Lean Enterprises).</li>
           </Typography>
         </Experience>
       </Box>

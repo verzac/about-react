@@ -6,6 +6,7 @@ import LinkedInIcon from '../assets/linkedin-brands.svg';
 import GitHubIcon from '../assets/github-brands.svg';
 import Reception from '../components/Reception';
 import MediumIcon from '../assets/medium-brands.svg';
+import ForRecruiterPage from './ForRecruiterPage';
 
 const styles = (theme: Theme) => ({
   name: {
@@ -48,7 +49,8 @@ const Home: React.FC<WithStyles<typeof styles>> = (props) => {
         </Box>
       </section>
       <section className={classes.sections}>
-        <Reception />
+        {/* <Reception /> */}
+        <ForRecruiterPage />
       </section>
     </>
   );
