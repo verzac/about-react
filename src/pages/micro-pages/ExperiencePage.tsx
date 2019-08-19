@@ -9,7 +9,7 @@ import AuspostBanner from '../../assets/devportal-banner.jpg';
 const ExperiencePage: React.FC = () => {
   return (
     <>
-      <Typography variant="h2" gutterBottom={true}>Experience</Typography>
+      <Typography variant="h2">Experience</Typography>
       <Box display="flex" flexDirection="row" justifyContent="center" flexWrap="wrap">
         <Experience
           projectTitle="Full-stack Developer @ Monash University's ERAMIS"
