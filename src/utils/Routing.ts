@@ -1,4 +1,4 @@
-import { createBrowserHistory, Location, Action } from 'history';
+import { createBrowserHistory, Location } from 'history';
 import ReactGA from 'react-ga';
 
 const history = createBrowserHistory();
