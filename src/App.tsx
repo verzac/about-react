@@ -7,6 +7,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import Routing from './utils/Routing';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import ContactMeForm from './components/ContactMeForm';
+import { reactAppVersion, reactAppName } from './constants';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -24,7 +25,10 @@ const styles = (theme: Theme) => createStyles({
   title: {
     flexGrow: 1,
     textAlign: 'start',
-  }
+  },
+  footer: {
+
+  },
 });
 
 const theme = createMuiTheme({
@@ -77,6 +81,9 @@ const App: React.FC<WithStyles<typeof styles>> = (props) => {
               <Route component={NotFoundPage} />
             </Switch>
           </div>
+          <Typography variant="overline" className={classes.footer}>
+            {reactAppName}@{reactAppVersion}
+          </Typography>
         </div>
       </Router>
     </MuiThemeProvider>
