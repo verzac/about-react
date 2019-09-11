@@ -6,6 +6,7 @@ import './App.css';
 import NotFoundPage from './pages/NotFoundPage';
 import Routing from './utils/Routing';
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import ContactMeForm from './components/ContactMeForm';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -66,11 +67,13 @@ const App: React.FC<WithStyles<typeof styles>> = (props) => {
                 Benjamin Tanone
           </Typography>
               <Button color="inherit" onClick={() => Routing.goTo('/')}>Home</Button>
+              <Button color="inherit" onClick={() => Routing.goTo('/contact')}>Contact Me</Button>
             </Toolbar>
           </AppBar>
           <div className={classes.content}>
             <Switch>
               <Route exact path={['/', '/home']} component={HomePage} />
+              <Route exact path={['/contact']} component={ContactMeForm} />
               <Route component={NotFoundPage} />
             </Switch>
           </div>
