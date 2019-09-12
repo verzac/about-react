@@ -27,7 +27,8 @@ const styles = (theme: Theme) => createStyles({
     textAlign: 'start',
   },
   footer: {
-
+    paddingTop: '22px',
+    paddingBottom: '22px',
   },
 });
 
@@ -81,8 +82,8 @@ const App: React.FC<WithStyles<typeof styles>> = (props) => {
               <Route component={NotFoundPage} />
             </Switch>
           </div>
-          <Typography variant="overline" className={classes.footer}>
-            {reactAppName}@{reactAppVersion}
+          <Typography className={classes.footer}>
+            {reactAppName}@{reactAppVersion} | <a target="_blank" rel="noopener noreferrer" href="https://github.com/verzac/about-react">GitHub Repo</a>
           </Typography>
         </div>
       </Router>
