@@ -1,4 +1,5 @@
 import { Theme, withStyles, createStyles, WithStyles } from "@material-ui/core";
+import React from 'react';
 
 const styles = (theme: Theme) => createStyles({
   section: {
