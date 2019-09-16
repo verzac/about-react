@@ -1,18 +1,27 @@
 import axios, { AxiosResponse } from 'axios';
-import { aboutApiBaseUrl } from '../constants';
+import { aboutApiBaseUrl, shouldMock } from '../constants';
+import { Record, String, Static } from 'runtypes';
+import { mockAsync } from '../utils/Mocks';
 
-export interface ContactForm {
-  email: string;
-  message: string;
-  reason: string;
-  firstName: string;
-  lastName: string;
-};
+const ContactFormRecord = Record({
+  email: String,
+  message: String,
+  reason: String,
+  firstName: String,
+  lastName: String,
+});
 
-async function submitContactFormService(contactMeForm: ContactForm): Promise<AxiosResponse> {
-  return axios.post('/contact', contactMeForm, {
-    baseURL: aboutApiBaseUrl,
+export type ContactForm = Static<typeof ContactFormRecord>;
+
+async function submitContactForm(contactMeForm: Partial<ContactForm>): Promise<void> {
+  if (shouldMock) {
+    return mockAsync(undefined, 2000);
+  }
+  ContactFormRecord.check(contactMeForm);
+  console.debug(aboutApiBaseUrl);
+  return axios.post(`${aboutApiBaseUrl}/contact`, contactMeForm, {
+    // baseURL: aboutApiBaseUrl,
   });
 }
 
-export const ContactFormService = { submitContactFormService };
+export const ContactFormService = { submitContactForm };
