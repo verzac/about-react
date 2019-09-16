@@ -2,13 +2,14 @@ import React from 'react';
 import TechnologiesPage from './micro-pages/TechnologiesPage';
 import LanguagePage from './micro-pages/LanguagePage';
 import ExperiencePage from './micro-pages/ExperiencePage';
+import PageSection from '../components/PageSection';
 
 const ForRecruiterPage: React.FC = () => {
   return (
     <>
-      <TechnologiesPage/>
-      <LanguagePage/>
-      <ExperiencePage/>
+      <PageSection><TechnologiesPage/></PageSection>
+      <PageSection><LanguagePage/></PageSection>
+      <PageSection><ExperiencePage/></PageSection>
     </>
   );
 }
