@@ -1,11 +1,13 @@
 import React from 'react';
-import { Typography, FormControl, TextField, Box, Theme, createStyles, withStyles, WithStyles, Select, MenuItem, InputLabel, FormHelperText, Button } from '@material-ui/core';
+import { Typography, FormControl, TextField, Box, Theme, createStyles, withStyles, WithStyles, Select, MenuItem, InputLabel, FormHelperText, Button, Snackbar, IconButton } from '@material-ui/core';
 import { ContactFormService, ContactForm } from '../services/ContactFormService';
+import CloseIcon from '@material-ui/icons/Close';
 
 interface ContactMeFormState {
   isLoading: boolean;
   errorMessage?: string;
   form: Partial<ContactForm>;
+  showSuccess: boolean;
 };
 
 const styles = (theme: Theme) => createStyles({
@@ -31,10 +33,12 @@ class ContactMeForm extends React.Component<WithStyles<typeof styles>, ContactMe
   };
 
   onChange = (event: any) => {
-    this.setState({ form: {
-      ...this.state.form,
-      [event.target.name]: event.target.value,
-    }});
+    this.setState({
+      form: {
+        ...this.state.form,
+        [event.target.name]: event.target.value,
+      }
+    });
   };
 
   onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -48,8 +52,10 @@ class ContactMeForm extends React.Component<WithStyles<typeof styles>, ContactMe
         console.error(e);
         this.setState({ isLoading: false, errorMessage: 'Unable to submit contact form. Please try again later, or get in touch with me through https://linkedin.com/in/benjamin-tanone/' });
       })
-      .then(() => this.setState({ isLoading: false }));
+      .then(() => this.setState({ isLoading: false, showSuccess: true }));
   };
+
+  onCloseSnackbar = () => this.setState({ showSuccess: false });
 
   render() {
     const { classes } = this.props;
@@ -116,7 +122,19 @@ class ContactMeForm extends React.Component<WithStyles<typeof styles>, ContactMe
           </Box>
           <Button variant="contained" type="submit" color="primary" disabled={isLoading}>Send!</Button>
           {errorMessage && <Typography color="error">{errorMessage}</Typography>}
-          {this.state.showSuccess && <Typography color="primary">Contact form has been successfully submitted! I'll get back to you in 1 business day :)</Typography>}
+          <Snackbar
+            open={this.state.showSuccess}
+            // autoHideDuration={20000}
+            onClose={this.onCloseSnackbar}
+            message="Contact form has been successfully submitted! I'll get back to you in 1 business day :)"
+            action={
+            <IconButton
+              color="inherit"
+              onClick={this.onCloseSnackbar}
+            >
+              <CloseIcon/>
+            </IconButton>}
+          />
         </form>
       </>
     );
