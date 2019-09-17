@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { aboutApiBaseUrl, shouldMock } from '../constants';
 import { Record, String, Static } from 'runtypes';
 import { mockAsync } from '../utils/Mocks';

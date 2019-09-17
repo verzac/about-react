@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, FormControl, TextField, Box, Theme, createStyles, withStyles, WithStyles, Select, MenuItem, InputLabel, FormHelperText, Button, Snackbar, IconButton } from '@material-ui/core';
+import { Typography, FormControl, TextField, Box, Theme, createStyles, withStyles, WithStyles, Select, MenuItem, InputLabel, Button, Snackbar, IconButton } from '@material-ui/core';
 import { ContactFormService, ContactForm } from '../services/ContactFormService';
 import CloseIcon from '@material-ui/icons/Close';
 
