@@ -6,6 +6,8 @@ import './App.css';
 import NotFoundPage from './pages/NotFoundPage';
 import Routing from './utils/Routing';
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import ContactMeForm from './components/ContactMeForm';
+import { reactAppVersion, reactAppName } from './constants';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -23,7 +25,11 @@ const styles = (theme: Theme) => createStyles({
   title: {
     flexGrow: 1,
     textAlign: 'start',
-  }
+  },
+  footer: {
+    paddingTop: '22px',
+    paddingBottom: '22px',
+  },
 });
 
 const theme = createMuiTheme({
@@ -66,14 +72,19 @@ const App: React.FC<WithStyles<typeof styles>> = (props) => {
                 Benjamin Tanone
           </Typography>
               <Button color="inherit" onClick={() => Routing.goTo('/')}>Home</Button>
+              <Button color="inherit" onClick={() => Routing.goTo('/contact')}>Contact Me</Button>
             </Toolbar>
           </AppBar>
           <div className={classes.content}>
             <Switch>
               <Route exact path={['/', '/home']} component={HomePage} />
+              <Route exact path={['/contact']} component={ContactMeForm} />
               <Route component={NotFoundPage} />
             </Switch>
           </div>
+          <Typography className={classes.footer}>
+            {reactAppName}@{reactAppVersion} | <a target="_blank" rel="noopener noreferrer" href="https://github.com/verzac/about-react">GitHub Repo</a>
+          </Typography>
         </div>
       </Router>
     </MuiThemeProvider>
