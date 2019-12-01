@@ -33,7 +33,7 @@ const Home: React.FC<WithStyles<typeof styles>> = (props) => {
           Benjamin Tanone
         </Typography>
         <Typography>
-          Software Engineer. Coffee-Lover.
+          My name is Ben and I'm a software engineer who specialises in building cloud-native applications.
         </Typography>
         <Box display="flex" flexDirection="row" justifyContent="center" flexWrap="wrap">
           <a href="https://www.linkedin.com/in/benjamin-tanone/" target="_blank" rel="noopener noreferrer">

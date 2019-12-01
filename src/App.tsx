@@ -70,7 +70,7 @@ const App: React.FC<WithStyles<typeof styles>> = (props) => {
               </IconButton> */}
               <Typography className={classes.title}>
                 Benjamin Tanone
-          </Typography>
+              </Typography>
               <Button color="inherit" onClick={() => Routing.goTo('/')}>Home</Button>
               <Button color="inherit" onClick={() => Routing.goTo('/contact')}>Contact Me</Button>
             </Toolbar>
