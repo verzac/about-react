@@ -5,6 +5,7 @@ import { AwsIcon, SpringBootIcon, ReactIcon, NodeIcon, AwsSamIcon, AnsibleIcon, 
 import MonashUniversityLogo from '../../assets/monash-university-banner.jpg';
 import SapLogo from '../../assets/logo-sap.svg';
 import AuspostBanner from '../../assets/devportal-banner.jpg';
+import ZenaLogo from '../../assets/zena-logo.png';
 
 const ExperiencePage: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const ExperiencePage: React.FC = () => {
       <Box display="flex" flexDirection="row" justifyContent="center" flexWrap="wrap">
         <Experience
           projectTitle="Full-stack Developer @ Monash University's ERAMIS"
-          projectDuration="Dec 2018 - present"
+          projectDuration="Dec 2018 - Nov 2019"
           shortDescription="ERAMIS is a system used by Monash University to manage, audit and report on their research activities."
           bannerProps={{
             imgSrc: MonashUniversityLogo,
@@ -64,7 +65,7 @@ const ExperiencePage: React.FC = () => {
           projectDuration="Jan 2018 - Jun 2018"
           shortDescription="ZENA is a newly-formed fashion brand and boutique which needed IT expertise in order to develop their online presence."
           bannerProps={{
-            imgSrc: 'https://www.zena.id/wp-content/uploads/2018/02/LogoZena-01.png',
+            imgSrc: ZenaLogo,
             title: 'ZENA Indonesia',
           }}
         >
